@@ -9,6 +9,17 @@
         <link rel="stylesheet" href="./css/index.css">
     </head>
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="about">
+
         <h1>About</h1>
         <p>
         <h2>Passionate Data Professional | Tech Enthusiast | Agile Problem Solver</h2>
@@ -34,33 +45,48 @@
             Let's connect and explore the endless possibilities at the nexus of data, technology, and innovation!
            
         </p>
+        </section>
+
+        <section id="experience">
+
         <h1>
             Experience
         </h1>
-        <p>
-        <h3>Back-End Developer/ Co-lead @ Tech Fleet, California US (Remote)07/2022 - Till Date</h3>
-        <ul> 
-            <li>Developed Next.js scripts for user API endpoints.<br>
-            <li>Collaborated with cross-functional teams to enhance user experience.<br>
-            <li>Ensured code quality through automated testing.<br>
-        </ul>
-        <h3>Data Systems/Developer @ Cheth Limited, Lagos 12/2012 - 08/2016</h3>
-        <ul>
-            <li>Traveled to work with clients, observing business processes, interviewing staffs,
-            and documenting participation.<br>
-            <li>Created visual data representations and simplified technical problems.<br>
-            <li>Configured, tested, and maintained database technologies.<br>
-            <li>Troubleshoot database errors and met system availability targets.<br>
-            <li>Evaluated new database products and technologies.<br>
-            <li>Collaborated with IT teams for database infrastructure needs.<br>
-        </ul>
-        <h3>Data/Business Analyst @ Marvelous Computers, Ogun State 04/2007 - 04/2017</h3>
-        <ul>
-            <li> Designed questionnaires, coded, analyzed, and reported results.<br>
-            <li>Contributed to research and presentation preparation.<br>
-            </li>
-        </ul>
-        </p>
+            <div id="experience-items">
+        
+                <h3>Back-End Developer/ Co-lead @ Tech Fleet, California US (Remote)07/2022 - Till Date</h3>
+                <ul> 
+                <li>Developed Next.js scripts for user API endpoints.<br>
+                <li>Collaborated with cross-functional teams to enhance user experience.<br>
+                <li>Ensured code quality through automated testing.<br>
+                </ul>
+            </div>
+
+            <div id="experience-items">
+
+                <h3>Data Systems/Developer @ Cheth Limited, Lagos 12/2012 - 08/2016</h3>
+                <ul>
+                <li>Traveled to work with clients, observing business processes, interviewing staffs,
+                and documenting participation.<br>
+                <li>Created visual data representations and simplified technical problems.<br>
+                <li>Configured, tested, and maintained database technologies.<br>
+                <li>Troubleshoot database errors and met system availability targets.<br>
+                <li>Evaluated new database products and technologies.<br>
+               <li>Collaborated with IT teams for database infrastructure needs.<br>
+                </ul>
+            </div>
+
+            <div id="experience-items">
+
+                 <h3>Data/Business Analyst @ Marvelous Computers, Ogun State 04/2007 - 04/2017</h3>
+                <ul>
+                 <li> Designed questionnaires, coded, analyzed, and reported results.<br>
+                <li>Contributed to research and presentation preparation.<br>
+                </li>
+                </ul>
+            </div>
+        
+        </section>
         <section id="skills">
             <h2>Skills</h2>
                 <ul>
@@ -69,19 +95,15 @@
                 </ul>
             
         </section>
-        <section>
+        <section id="leave a message">
             <h2>
                 Leave a message
             </h2>
             <form name="leave_message">
-                <label for="usersName">Name</label>
-                <input type="text" id="usersName" name="usersName" required="true" ><br>
-                <label for="usersEmail">Email</label>
-                <input type="email" id="usersEmail"name="usersEmail" required="true"><br>
-                <label for ="usersMessage">Message</label>
-                <input type="text"
-                <textarea id="usersMessage" name="usersMessage"required="true" ></textarea><br>
-                <button type="submit"> Submit</button><br>
+                <input type="text" name="userName" placeholder="Name">
+                <input type="email" name="usersEmail" placeholder="Email">
+                <textarea name="usersMessage" placeholder="Message"></textarea>
+                <input type="submit" value="Submit"
             </form>
         </section>
         <section id="messages">
