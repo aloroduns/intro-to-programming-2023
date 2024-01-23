@@ -43,6 +43,20 @@ messageForm.addEventListener("submit", function(event) {
     });
     newMessage.appendChild(removeButton);
 
+    var editButton = document.createElement("button");
+    editButton.innerText = "edit";
+    editButton.type = "button";
+    editButton.addEventListener("click", function() {
+        var entry = editButton.parentNode;
+        var newMessage = prompt("Enter new message:");
+        if (newMessage) {
+            entry.querySelector("span").textContent = newMessage;
+        }
+    });
+    
+    
+    newMessage.appendChild(editButton);
+
     messageList.appendChild(newMessage);
 });
 }
@@ -50,13 +64,9 @@ messageForm.addEventListener("submit", function(event) {
 copyright.innerHTML = `Oluwadunsin Ogunleye © ${thisYear}`;
 footer.appendChild(copyright);
 
-var githubRequest = new XMLHttpRequest();
-
-githubRequest.open('GET', 'https://api.github.com/users/aloroduns/repos', true)
-githubRequest.send();
-
-githubRequest.addEventListener("load", function() {
-    var repositories = JSON.parse(this.response);
+fetch('https://api.github.com/users/aloroduns/repos')
+.then(response => response.json())
+.then(repositories => {
     console.log(repositories);
 
     var projectSection = document.getElementById('projects');
@@ -80,4 +90,6 @@ githubRequest.addEventListener("load", function() {
         
         projectList.appendChild(project);
     }
-});
+})
+
+.catch(error => console.error('Error:', error));
